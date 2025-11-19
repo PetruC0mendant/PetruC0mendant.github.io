@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bot Developer | Portfolio CV</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'discord-purple': '#5865F2',
+                        'dark-gray': '#2C2F33',
+                        'light-gray': '#99AAB5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar styling for a smoother look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2C2F33;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4F545C;
+            border-radius: 4px;
+        }
+
+        /* 1. Bot Icon Pulse Animation (CSS Keyframes) */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+        .bot-pulse {
+            animation: pulse 2s infinite ease-in-out;
+        }
+        
+        /* 2. Fade-In on Scroll Styling (Default State) */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        /* 2. Fade-In on Scroll Styling (Visible State triggered by JS) */
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-dark-gray text-white font-sans min-h-screen antialiased">
+
+    <!-- Header & Hero Section -->
+    <header class="bg-dark-gray shadow-lg sticky top-0 z-10 border-b border-discord-purple/20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-discord-purple">
+                <span class="text-white">&lt;</span>Developer<span class="text-white">/&gt;</span>
+            </h1>
+            <a href="#contact" class="px-4 py-2 bg-discord-purple text-white font-semibold rounded-lg hover:bg-discord-purple/80 transition duration-300 shadow-md">
+                Hire Me on Fiverr
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Introduction -->
+        <section class="text-center mb-16 pt-8">
+            <div class="inline-block p-4 mb-4 rounded-full bg-discord-purple/20 border-4 border-discord-purple bot-pulse">
+                <!-- Applied 'bot-pulse' class for animation -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot">
+                    <path d="M12 8V4H8"/><path d="M22 13a3.86 3.86 0 0 0-4.7-4.7c-.52-.16-1.07-.2-1.6-.2-1.3 0-2.3 1-3 2l-.2.3c-.64.8-1.56 1.2-2.4 1.2-1.4 0-2.6-1.1-3.2-2.3-1.1-2.1-3.8-2.6-5.8-1.5C3 6.6 2 8 2 10a10 10 0 0 0 20 0z"/><path d="M16 12h-2"/><path d="M10 12h-2"/>
+                </svg>
+            </div>
+            <h2 class="text-5xl font-extrabold mb-4 leading-tight">
+                Specialized <span class="text-discord-purple">Discord Bot Developer</span>
+            </h2>
+            <p class="text-xl text-light-gray max-w-2xl mx-auto">
+                Building fast, reliable, and feature-rich automation, management, and entertainment bots for your Discord community.
+            </p>
+            <a href="#portfolio" class="mt-8 inline-block px-8 py-3 bg-discord-purple text-white text-lg font-bold rounded-lg hover:bg-discord-purple/80 transition duration-300 transform hover:scale-105 shadow-xl">
+                View My Work ↓
+            </a>
+        </section>
+
+        <hr class="border-t border-discord-purple/30 mb-16">
+
+        <!-- Technical Skills -->
+        <section id="skills" class="mb-16 fade-in-section">
+            <h3 class="text-3xl font-bold text-center mb-10 text-discord-purple">My Core Tech Stack</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+
+                <!-- Skill Card 1: Main Language -->
+                <div class="p-6 bg-dark-gray/50 rounded-xl shadow-2xl border border-discord-purple/30 text-center hover:shadow-discord-purple/50 transition duration-300 transform hover:-translate-y-1">
+                    <p class="text-4xl mb-3">💻</p>
+                    <h4 class="text-xl font-semibold mb-1">Languages & Frameworks</h4>
+                    <p class="text-light-gray text-sm">Node.js (Discord.js), Python (Discord.py), TypeScript</p>
+                </div>
+
+                <!-- Skill Card 2: Database -->
+                <div class="p-6 bg-dark-gray/50 rounded-xl shadow-2xl border border-discord-purple/30 text-center hover:shadow-discord-purple/50 transition duration-300 transform hover:-translate-y-1">
+                    <p class="text-4xl mb-3">🗄️</p>
+                    <h4 class="text-xl font-semibold mb-1">Database Integration</h4>
+                    <p class="text-light-gray text-sm">MongoDB, PostgreSQL, SQLite (for smaller projects)</p>
+                </div>
+
+                <!-- Skill Card 3: Interactivity -->
+                <div class="p-6 bg-dark-gray/50 rounded-xl shadow-2xl border border-discord-purple/30 text-center hover:shadow-discord-purple/50 transition duration-300 transform hover:-translate-y-1">
+                    <p class="text-4xl mb-3">⚡</p>
+                    <h4 class="text-xl font-semibold mb-1">Modern Discord Features</h4>
+                    <p class="text-light-gray text-sm">Slash Commands, Buttons, Modals, Embeds</p>
+                </div>
+
+                <!-- Skill Card 4: External APIs -->
+                <div class="p-6 bg-dark-gray/50 rounded-xl shadow-2xl border border-discord-purple/30 text-center hover:shadow-discord-purple/50 transition duration-300 transform hover:-translate-y-1">
+                    <p class="text-4xl mb-3">🔗</p>
+                    <h4 class="text-xl font-semibold mb-1">API Integration</h4>
+                    <p class="text-light-gray text-sm">REST API calls (e.g., Crypto, Games, Weather data)</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-discord-purple/30 mb-16">
+
+        <!-- Portfolio (Mock Projects) -->
+        <section id="portfolio" class="mb-16 fade-in-section">
+            <h3 class="text-3xl font-bold text-center mb-10 text-discord-purple">Project Showcase</h3>
+            <p class="text-center text-light-gray mb-8 max-w-3xl mx-auto">
+                These are examples of the high-quality, scalable bots I can build for your community or business needs.
+            </p>
+
+            <div class="space-y-12">
+
+                <!-- Project 1: Moderation/Management Bot -->
+                <div class="bg-dark-gray/70 p-8 rounded-xl shadow-xl border border-discord-purple/20 flex flex-col md:flex-row gap-8 transition duration-300 hover:scale-[1.01]">
+                    <div class="md:w-1/3 flex-shrink-0">
+                        <div class="bg-discord-purple/10 p-4 rounded-lg text-center">
+                            <h4 class="text-2xl font-bold mb-2">Guardian Bot</h4>
+                            <p class="text-sm text-light-gray">Management & Security</p>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4 text-light-gray">
+                            A comprehensive moderation system featuring automated rule enforcement, custom logging, and advanced anti-spam measures. Uses **MongoDB** for persistent server configuration and user disciplinary records.
+                        </p>
+                        <p class="font-semibold text-sm">Key Features:</p>
+                        <ul class="list-disc list-inside ml-4 text-sm text-light-gray grid grid-cols-2">
+                            <li>Timed Mutes & Bans</li>
+                            <li>Webhooks for Mod-Log Channel</li>
+                            <li>Profanity Filter with Custom Thresholds</li>
+                            <li>Welcome/Leave Message Automation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 2: External API Bot -->
+                <div class="bg-dark-gray/70 p-8 rounded-xl shadow-xl border border-discord-purple/20 flex flex-col md:flex-row gap-8 transition duration-300 hover:scale-[1.01]">
+                    <div class="md:w-1/3 flex-shrink-0">
+                        <div class="bg-discord-purple/10 p-4 rounded-lg text-center">
+                            <h4 class="text-2xl font-bold mb-2">Crypto Pulse</h4>
+                            <p class="text-sm text-light-gray">Data & Real-Time Info</p>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4 text-light-gray">
+                            A finance bot that integrates with public **REST APIs** (e.g., CoinGecko) to deliver real-time cryptocurrency prices, historical charts, and portfolio tracking commands. Optimized for fast response times.
+                        </p>
+                        <p class="font-semibold text-sm">Key Features:</p>
+                        <ul class="list-disc list-inside ml-4 text-sm text-light-gray grid grid-cols-2">
+                            <li>Real-Time Price Lookups (`/price BTC`)</li>
+                            <li>Market Overview Summaries</li>
+                            <li>User Portfolio Storage (SQLite)</li>
+                            <li>Daily Price Alert Notifications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-discord-purple/30 mb-16">
+
+        <!-- Contact & Call to Action -->
+        <section id="contact" class="text-center bg-discord-purple/10 p-10 rounded-xl shadow-2xl border-l-4 border-discord-purple fade-in-section">
+            <h3 class="text-3xl font-bold mb-4">Ready to Launch Your Custom Discord Bot?</h3>
+            <p class="text-xl text-light-gray mb-6 max-w-3xl mx-auto">
+                Let's discuss your project requirements, goals, and budget. I guarantee high-quality code and dedicated support.
+            </p>
+            <!-- IMPORTANT: Replace the placeholder link with your actual Fiverr Gig link! -->
+            <a href="https://www.fiverr.com/YOUR_GIG_LINK_HERE" target="_blank" class="inline-block px-10 py-4 bg-discord-purple text-white text-xl font-extrabold rounded-lg shadow-2xl transition duration-300 transform hover:scale-105 hover:shadow-discord-purple/80">
+                ⭐ Hire Me on Fiverr
+            </a>
+            <div class="mt-6 text-sm text-light-gray">
+                <p>Or contact directly: comendantpetru38@gmail.com</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 py-6 border-t border-discord-purple/20 text-center text-sm text-light-gray">
+        <p>&copy; 2024 Your Name/Developer Name. Built for Fiverr Profile.</p>
+    </footer>
+
+ 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.fade-in-section');
+
+            // Options for the observer (when to trigger)
+            const observerOptions = {
+                root: null, // relative to the viewport
+                rootMargin: '0px',
+                threshold: 0.1 // 10% of the element must be visible to trigger
+            };
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    // Check if the element is intersecting (in the viewport)
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // Stop observing once it's visible
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
